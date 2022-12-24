@@ -1,15 +1,20 @@
 from django.shortcuts import render
 from django.template import loader
-
+import random
 # Create your views here.
 
-food_list = [
-        {'id':1, 'name':'Burger King'},
-        {'id':2, 'name':'Andys Pizza'},
-        {'id':3, 'name':'McDonalds'},
+def generate_food():
+        food_list = [
+                {'food_name':'Pizza', 'food_description':'Pizza is a wonderfull!'},
+                {'food_name':'Potatoes', 'food_description':'Potates are fires!'},
+                {'food_name':'Burger', 'food_description':'Burget is burger king!'},
+        ]
 
-]
-
+        random_food = random.choice(food_list)
+        return random_food 
+ 
+ 
 def index(request):
-        context = {'food_list':food_list}
+        random_food = generate_food()
+        context = {'random_food':random_food}  
         return render(request,'food/index.html',context)

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,20 +13,17 @@
 <body> 
     {% block content %}
 
-    <h1 class="food_name">FOOD NAME</h1>
-    <p class="food_description">FOOD DESCRIPTION</p>
+    <div id="box1" class="center-screen fadein">
+        <img class='food_img' src="{% static 'images/chicken-leg.png' %}">
 
-    <div>
-        {% for foodl in food_list %}
-        <div>
-            <img src="{% static 'images/chicken-leg.png' %}">
-            <h2>{{foodl.id}} - {{foodl.name}}</h2>
-        </div>
-        {% endfor %}
+        <h1 class="food_name">{{random_food.food_name}}</h1>
+        <p class="food_description">{{random_food.food_description}}</p>
+
     </div>
-
+    
+    
     {% endblock %}
 
-
+  <script src="{% static 'scripts/main.js' %}"></script>
 </body>
 </html>

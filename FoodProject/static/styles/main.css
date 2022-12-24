@@ -1,3 +1,49 @@
-body{
-    background-color: purple;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,600;1,100&display=swap');
+
+
+.center-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    min-width: 20vh; 
+} 
+
+ 
+#box1{
+    margin: 100px auto; 
+    width: 70vh;
+    height: 70vh;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.food_img{
+    width: 20%;
+}
+
+.food_name{
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+.food_description{
+    color:black;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.fadein {
+    opacity: 0;
+    -moz-transition: opacity 1.5s;
+    -webkit-transition: opacity 1.5s;
+    -o-transition: opacity 1.5s;
+    transition: opacity 1.5s;
+}
+
+body.loaded .fadein {
+    opacity: 1;
 }
