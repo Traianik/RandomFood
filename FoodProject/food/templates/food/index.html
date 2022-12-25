@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 {% load static %}
 
-<html lang="en">
+<html lang="en"> 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" media="screen" href="{% static 'styles/main.css' %}"> 
+    <script type="text/javascript" src="{% static 'scripts/jquery-3.6.3.js' %}"></script>
 </head> 
  
 <body> 
@@ -17,17 +18,18 @@
         <img class='food_img' src="{{random_food.food_image.url}}">
  
         <h1 class="food_name">{{random_food.food_name}}</h1>
-        <button class="description_button">How to cook</button>
+        <button class="description_button" onclick="show_description()">How to cook</button>
 
     </div>
     
 
-    <div id="description_box" class="fadein">
-        <p class="food_description">{{random_food.food_description}}</p>
+    <div id="description_box" style="display:none;">
+        <p class="food_description .center-screen">{{random_food.food_description | safe}}</p>
     </div>
+    <script src="{% static 'scripts/main.js' %}"></script>
     
+
     {% endblock %}
-
-  <script src="{% static 'scripts/main.js' %}"></script>
+    
 </body>
 </html>

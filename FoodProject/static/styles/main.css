@@ -7,7 +7,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    
+     
     min-width: 20vh; 
 } 
 
@@ -22,10 +22,12 @@
 }
 
  
+
 #description_box{
     margin: 100px auto; 
+    padding: 20px;
     width: 180vh;
-    height: 40vh;
+    font-family: 'Poppins', sans-serif;
     background-color: white;
     border-radius: 25px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
@@ -91,7 +93,8 @@
 }
 
 .food_description{
-    padding: 20px; 
+    display: flex;
+    justify-content: center;
     color:black;
     font-family: 'Poppins', sans-serif;
 }
