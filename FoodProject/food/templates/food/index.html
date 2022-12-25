@@ -13,14 +13,18 @@
 <body> 
     {% block content %}
 
-    <div id="box1" class="center-screen fadein">
-        <img class='food_img' src="{% static 'images/chicken-leg.png' %}">
-
+    <div id="random_food_box" class="center-screen fadein">
+        <img class='food_img' src="{{random_food.food_image.url}}">
+ 
         <h1 class="food_name">{{random_food.food_name}}</h1>
-        <p class="food_description">{{random_food.food_description}}</p>
+        <button class="description_button">How to cook</button>
 
     </div>
     
+
+    <div id="description_box" class="fadein">
+        <p class="food_description">{{random_food.food_description}}</p>
+    </div>
     
     {% endblock %}
 
