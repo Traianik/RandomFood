@@ -90,6 +90,7 @@
 .food_name{
     color: black;
     font-family: 'Poppins', sans-serif;
+    margin:0px 30px 0px 30px;
 }
 
 .food_description{
